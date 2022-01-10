@@ -1,0 +1,33 @@
+<div class="container-fluid">
+
+
+  <div class="mt-5">
+
+    <!-- Header -->
+
+    <!-- List -->
+    <div class="product" *ngFor="let product of products">
+
+      <!-- Image -->
+      <div class="image" [style.background-image]="utils.sanitizeBackgroundImage(product.photo.file)"></div>
+
+      <!-- Title -->
+      <div class="title">{{ product.title }}</div>
+
+      <div class="info">
+
+        <!-- Price -->
+        <div>{{ product.price }}</div>
+
+        <!-- Minimum quantity -->
+        <div>{{ product.minimum_quantity }}</div>
+
+        <!-- Hidden -->
+        <div>{{ product.hidden }}</div>
+
+        <!-- Category -->
+        <div>{{ product.category.name }}</div>
+      </div>
+    </div>
+  </div>
+</div>

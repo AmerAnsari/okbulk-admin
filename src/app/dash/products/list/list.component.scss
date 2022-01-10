@@ -1,0 +1,35 @@
+@import "src/variables";
+
+.product {
+  padding: 8px;
+  display: flex;
+  background: $white;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  .image {
+    height: 45px;
+    min-width: 45px;
+    margin-right: 10px;
+    background-size: cover;
+    background-position: center;
+    background-color: $secondary;
+  }
+
+  .title {
+    margin-right: 40px;
+  }
+
+  .info {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+
+    > div {
+      width: 100px;
+    }
+  }
+}

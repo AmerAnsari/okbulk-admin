@@ -1,0 +1,33 @@
+<div class="dash">
+
+  <!-- Sidebar -->
+  <div class="sidebar" [class.collapsed-sidebar]="collapsedSidebar">
+
+    <!-- Header -->
+    <a class="logo" (click)="collapsedSidebar = !collapsedSidebar">
+      <fa-icon [fixedWidth]="true" [icon]="faMenu"></fa-icon>
+      <span class="text-primary">ok</span><span class="text-secondary">bulk</span>
+    </a>
+
+    <!-- Links -->
+    <div class="links">
+
+      <!-- Dashboard -->
+      <a routerLink="dashboard" routerLinkActive="active">
+        <fa-icon [fixedWidth]="true" [icon]="faDashboard"></fa-icon>
+        <span>Dashboard</span>
+      </a>
+
+      <!-- Products -->
+      <a routerLink="products" routerLinkActive="active">
+        <fa-icon [fixedWidth]="true" [icon]="faProducts"></fa-icon>
+        <span>Products</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Pages -->
+  <div class="pages">
+    <router-outlet></router-outlet>
+  </div>
+</div>

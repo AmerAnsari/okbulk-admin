@@ -1,0 +1,31 @@
+<div class="container py-5">
+  <div class="d-flex justify-content-center" *ngIf="form">
+    <form class="card" (ngSubmit)="submit()" [formGroup]="form.form">
+      <div class="card-body">
+
+        <!-- Email -->
+        <ngx-input-text type="text"
+                        name="username"
+                        label="Username"
+                        placeholder="Username"
+                        [form]="form"></ngx-input-text>
+
+        <!-- Password -->
+        <ngx-input-text type="password"
+                        name="password"
+                        label="Password"
+                        placeholder="Password"
+                        [form]="form"></ngx-input-text>
+
+        <!-- Error -->
+        <app-general-error [form]="form"></app-general-error>
+      </div>
+
+      <!-- Submit -->
+      <div class="card-footer text-end">
+        <button class="btn btn-primary" [disabled]="form.loading">Sign In</button>
+      </div>
+    </form>
+  </div>
+</div>
+
